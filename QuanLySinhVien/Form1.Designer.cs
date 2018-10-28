@@ -1,6 +1,6 @@
 ﻿namespace QuanLySinhVien
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tblStudent = new System.Windows.Forms.DataGridView();
+            this.lbDeptCode = new System.Windows.Forms.Label();
+            this.cbDeptCode = new System.Windows.Forms.ComboBox();
+            this.txtDept = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudent)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tblStudent
+            // 
+            this.tblStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblStudent.Location = new System.Drawing.Point(120, 103);
+            this.tblStudent.Name = "tblStudent";
+            this.tblStudent.Size = new System.Drawing.Size(374, 215);
+            this.tblStudent.TabIndex = 0;
+            // 
+            // lbDeptCode
+            // 
+            this.lbDeptCode.AutoSize = true;
+            this.lbDeptCode.Location = new System.Drawing.Point(117, 59);
+            this.lbDeptCode.Name = "lbDeptCode";
+            this.lbDeptCode.Size = new System.Drawing.Size(49, 13);
+            this.lbDeptCode.TabIndex = 1;
+            this.lbDeptCode.Text = "Ma khoa";
+            // 
+            // cbDeptCode
+            // 
+            this.cbDeptCode.FormattingEnabled = true;
+            this.cbDeptCode.Location = new System.Drawing.Point(172, 56);
+            this.cbDeptCode.Name = "cbDeptCode";
+            this.cbDeptCode.Size = new System.Drawing.Size(121, 21);
+            this.cbDeptCode.TabIndex = 2;
+            // 
+            // txtDept
+            // 
+            this.txtDept.Location = new System.Drawing.Point(329, 57);
+            this.txtDept.Name = "txtDept";
+            this.txtDept.ReadOnly = true;
+            this.txtDept.Size = new System.Drawing.Size(165, 20);
+            this.txtDept.TabIndex = 3;
+            // 
+            // frmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(619, 450);
+            this.Controls.Add(this.txtDept);
+            this.Controls.Add(this.cbDeptCode);
+            this.Controls.Add(this.lbDeptCode);
+            this.Controls.Add(this.tblStudent);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmMain";
+            this.Text = "QuanLySinhVien";
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudent)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView tblStudent;
+        private System.Windows.Forms.Label lbDeptCode;
+        private System.Windows.Forms.ComboBox cbDeptCode;
+        private System.Windows.Forms.TextBox txtDept;
     }
 }
 
