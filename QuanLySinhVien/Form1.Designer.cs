@@ -38,15 +38,16 @@
             // tblStudent
             // 
             this.tblStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblStudent.Location = new System.Drawing.Point(120, 103);
+            this.tblStudent.Location = new System.Drawing.Point(88, 103);
             this.tblStudent.Name = "tblStudent";
-            this.tblStudent.Size = new System.Drawing.Size(374, 215);
+            this.tblStudent.ReadOnly = true;
+            this.tblStudent.Size = new System.Drawing.Size(438, 215);
             this.tblStudent.TabIndex = 0;
             // 
             // lbDeptCode
             // 
             this.lbDeptCode.AutoSize = true;
-            this.lbDeptCode.Location = new System.Drawing.Point(117, 59);
+            this.lbDeptCode.Location = new System.Drawing.Point(85, 59);
             this.lbDeptCode.Name = "lbDeptCode";
             this.lbDeptCode.Size = new System.Drawing.Size(49, 13);
             this.lbDeptCode.TabIndex = 1;
@@ -55,17 +56,18 @@
             // cbDeptCode
             // 
             this.cbDeptCode.FormattingEnabled = true;
-            this.cbDeptCode.Location = new System.Drawing.Point(172, 56);
+            this.cbDeptCode.Location = new System.Drawing.Point(140, 56);
             this.cbDeptCode.Name = "cbDeptCode";
             this.cbDeptCode.Size = new System.Drawing.Size(121, 21);
             this.cbDeptCode.TabIndex = 2;
+            this.cbDeptCode.SelectedValueChanged += new System.EventHandler(this.cbDeptCode_SelectedIndexChanged);
             // 
             // txtDept
             // 
-            this.txtDept.Location = new System.Drawing.Point(329, 57);
+            this.txtDept.Location = new System.Drawing.Point(342, 56);
             this.txtDept.Name = "txtDept";
             this.txtDept.ReadOnly = true;
-            this.txtDept.Size = new System.Drawing.Size(165, 20);
+            this.txtDept.Size = new System.Drawing.Size(184, 20);
             this.txtDept.TabIndex = 3;
             // 
             // frmMain
