@@ -19,14 +19,29 @@ namespace QuanLySinhVien
             InitializeComponent();
 
             DAO dao = new DAO();
-            table = dao.table;
+            table = dao.Table;
             tblStudent.DataSource = table;
 
-            combo = dao.combo;
+            combo = dao.Combo;
             cbDeptCode.DataSource = combo.DefaultView;
             cbDeptCode.DisplayMember = "MAKHOA";
             txtDept.Text = combo.Rows[0]["TENKHOA"].ToString();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int index = cbDeptCode.SelectedIndex;
+            string searchSvien = txbSearchSvien.Text;
+
+            string deptCode = combo.Rows[index]["MAKHOA"].ToString();
+
+            DataView dv = new DataView(table)
+            {
+                RowFilter = $"MAKH = '{deptCode}' AND TEN LIKE '%{searchSvien}%'"
+            };
+            tblStudent.DataSource = dv;
+        }
+
         private void cbDeptCode_SelectedIndexChanged(object sender, EventArgs e)
         {
 
