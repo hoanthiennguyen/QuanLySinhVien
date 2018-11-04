@@ -22,16 +22,16 @@ namespace QuanLySinhVien
             ActiveControl = txbSearchSvien;
 
             // Init data grid view
+            
             DAO dao = new DAO();
             table = dao.Table;
             tblStudent.DataSource = table;
 
             tblStudent.Columns[0].HeaderText = "Họ Tên";
-            tblStudent.Columns[0].Width = tblStudent.Width - tblStudent.Columns[0].Width * 3 - tblStudent.RowHeadersWidth - 2;
             tblStudent.Columns[1].HeaderText = "Mã SV";
             tblStudent.Columns[2].HeaderText = "Năm";
             tblStudent.Columns[3].HeaderText = "Mã Khoa";
-
+            tblStudent.Columns[0].Width = tblStudent.Width - tblStudent.Columns[0].Width * 3 - tblStudent.RowHeadersWidth - 2;
             // Init cbbox
             combo = dao.Combo;
             cbDeptCode.DataSource = combo.DefaultView;
