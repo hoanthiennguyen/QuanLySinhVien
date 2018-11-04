@@ -40,10 +40,12 @@
             // 
             // tblStudent
             // 
+            this.tblStudent.AllowUserToAddRows = false;
             this.tblStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblStudent.Location = new System.Drawing.Point(37, 76);
             this.tblStudent.Name = "tblStudent";
             this.tblStudent.ReadOnly = true;
+            this.tblStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblStudent.Size = new System.Drawing.Size(749, 349);
             this.tblStudent.TabIndex = 0;
             // 

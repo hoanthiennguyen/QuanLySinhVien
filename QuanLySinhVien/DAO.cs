@@ -12,7 +12,7 @@ namespace QuanLySinhVien
     class DAO
     {
         private SqlDataAdapter Adapter;
-        private string CnnStr = "Data Source = localhost; uid = sa; pwd = 1337112; Initial Catalog = QLSVien";
+        private string CnnStr = "Data Source = localhost; uid = sa; pwd = 123456; Initial Catalog = QLSVien";
         public DataTable Table;
         public DataTable Combo;
         public DAO()
