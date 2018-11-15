@@ -43,6 +43,7 @@ namespace QuanLySinhVien
             int index = cbDeptCode.SelectedIndex;
             string searchSvien = txbSearchSvien.Text;
 
+            txtDept.Text = combo.Rows[index]["TENKHOA"].ToString();
             string deptCode = combo.Rows[index]["MAKHOA"].ToString();
 
             DataView dv = new DataView(table) {
@@ -56,24 +57,17 @@ namespace QuanLySinhVien
             search();
         }
 
-        private void txbSearchSvien_KeyDown(object sender, KeyEventArgs e) {
-            if (e.KeyCode == Keys.Enter) {
-                search();
+        private void txbSearchSvien_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                txbSearchSvien.Clear();
             }
         }
 
         private void cbDeptCode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cbDeptCode.SelectedIndex;
-
-            string dept = combo.Rows[index]["TENKHOA"].ToString();
-            txtDept.Text = dept;
-            string deptCode = combo.Rows[index]["MAKHOA"].ToString();
-
-            DataView dv = new DataView(table);
-            dv.RowFilter = "MAKH = '" + deptCode + "'"; // query example = "id = 10"
-            tblStudent.DataSource = dv;
-            lbTotal.Text = tblStudent.RowCount.ToString();
+            search();
         }
 
     }
