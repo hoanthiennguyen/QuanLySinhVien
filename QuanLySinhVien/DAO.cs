@@ -11,22 +11,32 @@ namespace QuanLySinhVien
     [Serializable]
     class DAO
     {
-        SqlDataAdapter adapter;
-        public DataTable table;
-        public DataTable combo;
+        private SqlDataAdapter Adapter;
+        private string CnnStr = "Data Source = localhost; uid = sa; pwd = 123456; Initial Catalog = QLSVien";
+        public DataTable Table;
+        public DataTable Combo;
         public DAO()
         {
-            string cnnStr = "Data Source = localhost; uid = sa; pwd = 123456; Initial Catalog = QLSVien";
-            string sqlSVien = "SELECT * FROM SVien";
-            string sqlCombo = "SELECT * FROM Khoa";
-            adapter = new SqlDataAdapter(sqlSVien, cnnStr);
-            table = new DataTable();
-            adapter.Fill(table);
-
-            combo = new DataTable();
-            adapter = new SqlDataAdapter(sqlCombo, cnnStr);
-            adapter.Fill(combo);
+            loadTableSvien();
+            loadTableKhoa();
         }
-        
+
+        public void loadTableSvien()
+        {
+            string sqlSVien = "SELECT * FROM SVIEN";
+
+            Adapter = new SqlDataAdapter(sqlSVien, CnnStr);
+            Table = new DataTable();
+            Adapter.Fill(Table);
+        }
+
+        public void loadTableKhoa()
+        {
+            string sqlCombo = "SELECT * FROM KHOA";
+
+            Combo = new DataTable();
+            Adapter = new SqlDataAdapter(sqlCombo, CnnStr);
+            Adapter.Fill(Combo);
+        }
     }
 }
